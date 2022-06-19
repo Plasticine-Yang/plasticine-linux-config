@@ -1,0 +1,2 @@
+-- basic configuration
+require('basic')
