@@ -18,8 +18,8 @@ vim.wo.colorcolumn = "80"
 -- 使用空格替代 tab
 vim.bo.expandtab = true
 -- NORMAL 模式下 >> << 和 INSERT 模式下 CTRL-T CTRL-D 的缩进长度
-vim.g.shiftround = true
-vim.g.shiftwidth = 2
+vim.o.shiftround = true
+vim.o.shiftwidth = 2
 -- 1 个 tab 显示为 2 个空格
 vim.o.tabstop = 2
 vim.bo.tabstop = 2
@@ -29,42 +29,42 @@ vim.bo.softtabstop = 2
 vim.bo.autoindent = true
 vim.bo.smartindent = true
 -- 搜索大小写不敏感 而在包含大写的时候让搜索变成大小写敏感
-vim.g.ignorecase = true
-vim.g.smartcase = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 -- 搜索结果不高亮显示
-vim.g.hlsearch = false
+vim.o.hlsearch = false
 -- 输入的同时搜索
 vim.g.incsearch = true
 -- 命令行高设置为 2 行
-vim.g.cmdheight = 2
+vim.o.cmdheight = 2
 -- 当文件被外部程序修改的时候 自动加载修改后的内容
 vim.g.autoread = true
 vim.bo.autoread = true
 -- 光标在行首的时候，使用左右方向键可以跳转到上一行或下一行
-vim.g.whichwrap = "<,>,[,]"
+vim.o.whichwrap = "<,>,[,]"
 -- 允许隐藏被修改过的 buffer
-vim.g.hidden = true
+vim.o.hidden = true
 -- 开启鼠标支持
-vim.g.mouse = "a"
+vim.o.mouse = "a"
 -- 禁止创建备份文件
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
 -- 缩短 swap file 的更新时间间隔
-vim.g.updatetime = 300
+vim.o.updatetime = 300
 -- 设置快捷键触发的等待时间
-vim.g.timeoutlen = 500
+vim.o.timeoutlen = 500
 -- 分隔窗口的时候 新窗口从下面或者右边出现
-vim.g.splitbelow = true
-vim.g.splitright = true
+vim.o.splitbelow = true
+vim.o.splitright = true
 -- 自动补全但是不会自动选中
-vim.g.completeopt = "menu,menuone,noselect,noinsert"
+vim.o.completeopt = "menu,menuone,noselect,noinsert"
 -- 补全增强
-vim.g.wildmenu = true
+vim.o.wildmenu = true
 -- 补全最多 10 行
 vim.o.pumheight = 10
 -- 永远显示 tabline
-vim.g.showtabline = 2
+vim.o.showtabline = 2
 -- 使用增强状态栏插件后不需要 vim 的模式提示
 vim.g.showmode = false
 -- 样式
