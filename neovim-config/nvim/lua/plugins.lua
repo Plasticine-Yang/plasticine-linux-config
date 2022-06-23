@@ -13,13 +13,53 @@ packer.startup(
 
     ------------------------ colorscheme ------------------------
 
+    -- vim-surround
+    use 'tpope/vim-surround'
+
+    -- vim-easymotion
+    use 'easymotion/vim-easymotion'
+
     -- nvim-tree 侧边文件浏览器
-    use {
+    use({
       'kyazdani42/nvim-tree.lua',
       requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icons
-      },
-    }
+        -- optional, for file icons
+        'kyazdani42/nvim-web-devicons'
+      }
+    })
+
+    -- bufferline 顶部标签页
+    use({
+      'akinsho/bufferline.nvim',
+      requires = {
+        'kyazdani42/nvim-web-devicons',
+        'moll/vim-bbye'
+      }
+    })
+
+    -- lualine 底部信息显示
+    use({
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' }
+    })
+    use('arkav/lualine-lsp-progress')
+
+    -- telescope 文件模糊搜索
+    use({
+      'nvim-telescope/telescope.nvim',
+      requires = { 'nvim-lua/plenary.nvim' }
+    })
+    -- telescope extensions
+    use 'LinArcX/telescope-env.nvim'
+
+    -- dashboard-nvim 
+    use('glepnir/dashboard-nvim')
+
+    -- project
+    use('ahmedkhalf/project.nvim')
+
+    -- treesitter 语法高亮
+    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 
   end 
 )

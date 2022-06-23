@@ -16,6 +16,7 @@ vim.wo.signcolumn = "yes"
 -- 右侧参考线
 vim.wo.colorcolumn = "80"
 -- 使用空格替代 tab
+vim.o.expandtab = true
 vim.bo.expandtab = true
 -- NORMAL 模式下 >> << 和 INSERT 模式下 CTRL-T CTRL-D 的缩进长度
 vim.o.shiftround = true
@@ -73,6 +74,6 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 把空格显示成一个点
 vim.o.list = true
-vim.o.listchars = "space:·"
+vim.o.listchars = "space:·,tab:> "
 -- Dont' pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. 'c'

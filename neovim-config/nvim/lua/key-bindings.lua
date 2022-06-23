@@ -76,6 +76,9 @@ map('v', 'J', ":move '>+1<CR>gv-gv", opt)
 map('v', 'K', ":move '<-2<CR>gv-gv", opt)
 -- VISUAL 模式中粘贴的时候默认会复制被粘贴的文本 很反人类 不需要
 map('v', 'p', '"_dP', opt)
+-- H 行首, L 行尾 
+map('v', 'H', '^', opt)
+map('v', 'L', 'g_', opt)
 
 -- =========================== VISUAL END ===========================
 
@@ -120,6 +123,38 @@ pluginKeys.nvimTreeList = {
   { key = 'x', action = 'cut' },
   { key = 'c', action = 'copy' },
   { key = 'p', action = 'paste' },
+}
+
+-- bufferline
+-- 左右Tab切换
+map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+-- 关闭 tab，使用 "moll/vim-bbye" 插件的 Bdelete 实现
+map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map('n', '<C-s>', ':w<CR>', opt)
+map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
+map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
+
+-- telescope 文件搜索
+map('n', '<C-p>', ':Telescope find_files<CR>', opt)
+map('n', '<C-f>', ':Telescope live_grep<CR>', opt)
+pluginKeys.telescopeList = {
+  i = {
+    -- 上下移动
+    ["<C-j>"] = "move_selection_next",
+    ["<C-k>"] = "move_selection_previous",
+    ["<Down>"] = "move_selection_next",
+    ["<Up>"] = "move_selection_previous",
+    -- 历史记录
+    ["<C-n>"] = "cycle_history_next",
+    ["<C-p>"] = "cycle_history_prev",
+    -- 关闭窗口
+    ["<C-c>"] = "close",
+    -- 预览窗口上下滚动
+    ["<C-u>"] = "preview_scrolling_up",
+    ["<C-d>"] = "preview_scrolling_down",
+  },
 }
 
 return pluginKeys
