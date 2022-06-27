@@ -126,12 +126,14 @@ map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = { -- 打开文件或文件夹
-  { key = { "o", "<2-LeftMouse>" }, action = "edit" },
+  { key = { "o", "l", "<2-LeftMouse>" }, action = "edit" },
   { key = "<CR>", action = "system_open" },
-  -- v分屏打开文件
-  { key = "v", action = "vsplit" },
-  -- h分屏打开文件
-  { key = "h", action = "split" },
+  -- h 关闭展开的目录
+  { key = "h", action = "close_node" },
+  -- sv 水平分屏打开文件
+  { key = "sv", action = "vsplit" },
+  -- sh 分屏打开文件
+  { key = "sh", action = "split" },
   -- Ignore (node_modules)
   { key = "i", action = "toggle_ignored" },
   -- Hide (dotfiles)

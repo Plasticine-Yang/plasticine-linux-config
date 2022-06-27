@@ -15,7 +15,7 @@ null_ls.setup({
     --  brew install shfmt
     formatting.shfmt,
     -- StyLua
-    formatting.stylua,
+    -- formatting.stylua,
     -- frontend
     formatting.prettier.with({ -- 比默认少了 markdown
       filetypes = {
