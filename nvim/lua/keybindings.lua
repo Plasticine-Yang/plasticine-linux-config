@@ -18,11 +18,16 @@ local opt = {
 -- 本地变量
 local map = vim.api.nvim_set_keymap
 
--- $跳到行尾不带空格 (交换$ 和 g_)
-map("v", "$", "g_", opt)
-map("v", "g_", "$", opt)
-map("n", "$", "g_", opt)
-map("n", "g_", "$", opt)
+-- H 移动到行首，L 移动到行尾
+map("n", "H", "^", opt)
+map("n", "L", "g_", opt)
+
+-- INSERT 模式下 <C-h> 移动到行首 <C-l> 移动到行尾
+map("i", "<C-h>", "<Esc>I", opt)
+map("i", "<C-l>", "<Esc>A", opt)
+
+-- INSERT 模式下 jk 回到 NORMAL 模式
+map("i", "jk", "<Esc>", opt)
 
 -- 命令行下 Ctrl+j/k  上一个下一个
 map("c", "<C-j>", "<C-n>", { noremap = false })
@@ -280,11 +285,11 @@ pluginKeys.mapDAP = function()
     "n",
     "<leader>de",
     ":lua require'dap'.close()<CR>"
-      .. ":lua require'dap'.terminate()<CR>"
-      .. ":lua require'dap.repl'.close()<CR>"
-      .. ":lua require'dapui'.close()<CR>"
-      .. ":lua require('dap').clear_breakpoints()<CR>"
-      .. "<C-w>o<CR>",
+    .. ":lua require'dap'.terminate()<CR>"
+    .. ":lua require'dap.repl'.close()<CR>"
+    .. ":lua require'dapui'.close()<CR>"
+    .. ":lua require('dap').clear_breakpoints()<CR>"
+    .. "<C-w>o<CR>",
     opt
   )
   -- 继续
