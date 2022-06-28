@@ -29,6 +29,10 @@ map("i", "<C-l>", "<Esc>A", opt)
 -- INSERT 模式下 jk 回到 NORMAL 模式
 map("i", "jk", "<Esc>", opt)
 
+-- <C-s> 保存文件
+map("n", "<C-s>", ":w<CR>", opt)
+map("i", "<C-s>", "<Esc>:w<CR>a", opt)
+
 -- 命令行下 Ctrl+j/k  上一个下一个
 map("c", "<C-j>", "<C-n>", { noremap = false })
 map("c", "<C-k>", "<C-p>", { noremap = false })
