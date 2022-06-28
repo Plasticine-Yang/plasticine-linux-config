@@ -22,10 +22,6 @@ local map = vim.api.nvim_set_keymap
 map("n", "H", "^", opt)
 map("n", "L", "g_", opt)
 
--- INSERT 模式下 <C-h> 移动到行首 <C-l> 移动到行尾
-map("i", "<C-h>", "<Esc>I", opt)
-map("i", "<C-l>", "<Esc>A", opt)
-
 -- INSERT 模式下 jk 回到 NORMAL 模式
 map("i", "jk", "<Esc>", opt)
 
@@ -72,8 +68,8 @@ map("n", "qq", ":q!<CR>", opt)
 map("n", "<leader>q", ":qa!<CR>", opt)
 
 -- insert 模式下，跳到行首行尾
--- map("i", "<C-h>", "<ESC>I", opt)
--- map("i", "<C-l>", "<ESC>A", opt)
+map("i", "<C-h>", "<ESC>I", opt)
+map("i", "<C-l>", "<ESC>A", opt)
 
 ------------------------------------------------------------------
 -- windows 分屏快捷键
@@ -261,7 +257,7 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
   mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
   mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
-  mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
+  mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opt)
   -- 未用
   -- mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
   -- mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)

@@ -36,7 +36,7 @@ autocmd("TermOpen", {
 autocmd("BufWritePre", {
   group = myAutoGroup,
   pattern = { "*.lua", "*.py", "*.sh" },
-  callback = vim.lsp.buf.formatting_sync,
+  callback = vim.lsp.buf.format,
 })
 
 -- 修改lua/plugins.lua 自动更新插件
@@ -66,7 +66,7 @@ autocmd("BufEnter", {
   pattern = "*",
   callback = function()
     vim.opt.formatoptions = vim.opt.formatoptions
-      - "o" -- O and o, don't continue comments
-      + "r" -- But do continue when pressing enter.
+        - "o" -- O and o, don't continue comments
+        + "r" -- But do continue when pressing enter.
   end,
 })
