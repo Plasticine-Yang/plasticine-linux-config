@@ -87,6 +87,16 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# fastgit
+alias start-fastgit='git config --global url."https://hub.fastgit.xyz/".insteadOf "https://github.com/"'
+alias stop-fastgit='git config --unset --global url.https://hub.fastgit.xyz/.insteadof'
+
+# lsd --tree
+alias lst='lsd --tree'
+
+# set proxy when login
+proxy system
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -125,8 +135,6 @@ bindkey '^ ' autosuggest-accept
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# proxy to windows
-source /etc/proxy-utils/start-proxy
 fpath=($fpath "/home/plasticine/.zfunctions")
 
 # vi-mode plugin config
