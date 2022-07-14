@@ -95,7 +95,7 @@ alias stop-fastgit='git config --unset --global url.https://hub.fastgit.xyz/.ins
 alias lst='lsd --tree'
 
 # set proxy when login
-proxy system
+source proxy-utils system
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
