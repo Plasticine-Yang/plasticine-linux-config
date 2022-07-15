@@ -96,6 +96,8 @@ alias lst='lsd --tree'
 
 # set proxy when login
 source proxy-utils system
+proxy-utils git
+proxy-utils npm
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
