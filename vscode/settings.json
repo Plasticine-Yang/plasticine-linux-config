@@ -30,6 +30,9 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   // ====================== vim 配置 ======================
   // 修改 <leader> 为空格
   "vim.leader": "<Space>",
@@ -78,6 +81,158 @@
       ],
       "commands": [
         "outline.focus"
+      ]
+    },
+    // 垂直方向移动时始终保持光标在中央
+    {
+      "before": [
+        "j"
+      ],
+      "after": [
+        "j",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "k"
+      ],
+      "after": [
+        "k",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "after": [
+        "<C-d>",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "<C-u>"
+      ],
+      "after": [
+        "<C-u>",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "<C-f>"
+      ],
+      "after": [
+        "<C-f>",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "<C-b>"
+      ],
+      "after": [
+        "<C-b>",
+        "z",
+        "z"
+      ]
+    },
+    // <leader>f 格式化代码
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    // <C-w><C-w> 关闭窗口
+    {
+      "before": [
+        "<C-w>",
+        "<C-w>"
+      ],
+      "after": [
+        "<C-w>",
+        "c"
+      ]
+    },
+    // <leader>p 显示面板
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.togglePanel"
+      ]
+    },
+    // gh 鼠标悬浮
+    {
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    // gd 跳转变量定义
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    // gr 查看引用
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    // gR 查看引用 -- 在底部面板显示
+    {
+      "before": [
+        "g",
+        "R"
+      ],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
+    // <A-h> 切换到左标签页
+    {
+      "before": [
+        "<A-h>"
+      ],
+      "after": [
+        "g",
+        "T"
+      ]
+    },
+    // <A-l> 切换到右标签页
+    {
+      "before": [
+        "<A-l>"
+      ],
+      "after": [
+        "g",
+        "t"
       ]
     }
   ],
@@ -134,6 +289,57 @@
         "<Esc>",
         "l",
         "a"
+      ]
+    }
+  ],
+  // VISUAL 模式下的按键映射
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // 只格式化选中的代码
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatSelection"
+      ]
+    },
+    // <S-h> 移动到行首
+    {
+      "before": [
+        "<S-h>"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    // <S-l> 移动到行尾
+    {
+      "before": [
+        "<S-l>"
+      ],
+      "after": [
+        "$"
+      ]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    // <S-h> 移动到行首
+    {
+      "before": [
+        "<S-h>"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    // <S-l> 移动到行尾
+    {
+      "before": [
+        "<S-l>"
+      ],
+      "after": [
+        "$"
       ]
     }
   ]
