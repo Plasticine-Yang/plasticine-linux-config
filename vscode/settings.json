@@ -13,11 +13,16 @@
   "editor.smoothScrolling": true,
   // 光标平滑移动
   "editor.cursorSmoothCaretAnimation": true,
+  // 删除文件不再询问
+  "explorer.confirmDelete": false,
   // ====================== volar 配置 ======================
   // ref 自动添加 .value
   "volar.autoCompleteRefs": true,
   // ====================== 语言配置 ======================
   "javascript.suggest.completeJSDocs": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -31,6 +36,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // ====================== vim 配置 ======================
