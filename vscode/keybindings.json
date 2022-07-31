@@ -220,13 +220,13 @@
   {
     "key": "oem_6 d",
     "command": "editor.action.marker.nextInFiles",
-    "when": "editorFocus"
+    "when": "editorFocus && vim.mode != 'Insert'"
   },
   // 跳转到上一个错误
   {
     "key": "oem_4 d",
     "command": "editor.action.marker.prevInFiles",
-    "when": "editorFocus"
+    "when": "editorFocus && vim.mode != 'Insert'"
   },
   // 禁用默认的快速修复快捷键
   {
