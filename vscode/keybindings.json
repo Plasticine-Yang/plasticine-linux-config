@@ -200,5 +200,20 @@
     "key": "alt+l alt+c",
     "command": "-extension.liveServer.goOffline",
     "when": "editorTextFocus"
+  },
+  // 关闭默认的 toggle 左侧主栏快捷键
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  // toggle 左侧主栏
+  {
+    "key": "alt+1",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  // toggle 右侧辅栏
+  {
+    "key": "alt+2",
+    "command": "workbench.action.toggleAuxiliaryBar"
   }
 ]
