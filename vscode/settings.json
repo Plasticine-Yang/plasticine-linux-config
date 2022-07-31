@@ -2,6 +2,8 @@
   // 主题
   "workbench.colorTheme": "monokai-charcoal",
   // ====================== vscode 编辑器相关配置 ======================
+  // 字体
+  "editor.fontFamily": "'CaskaydiaCove NF', Consolas, 'Courier New', monospace",
   // Auto Rename Tag 的官方替代品
   "editor.linkedEditing": true,
   // Auto Close Tag 内置了 不需要手动开启
@@ -13,6 +15,8 @@
   "editor.smoothScrolling": true,
   // 光标平滑移动
   "editor.cursorSmoothCaretAnimation": true,
+  // 开启连字符显示
+  "editor.fontLigatures": true,
   // 删除文件不再询问
   "explorer.confirmDelete": false,
   // ====================== volar 配置 ======================
@@ -350,5 +354,7 @@
         "$"
       ]
     }
-  ]
+  ],
+  // live-server 不显示已启动信息
+  "liveServer.settings.donotShowInfoMsg": true
 }
