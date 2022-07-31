@@ -215,5 +215,29 @@
   {
     "key": "alt+2",
     "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  // 跳转到下一个错误
+  {
+    "key": "oem_6 d",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "editorFocus"
+  },
+  // 跳转到上一个错误
+  {
+    "key": "oem_4 d",
+    "command": "editor.action.marker.prevInFiles",
+    "when": "editorFocus"
+  },
+  // 禁用默认的快速修复快捷键
+  {
+    "key": "ctrl+oem_period",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  // alt+enter 快速修复
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   }
 ]
