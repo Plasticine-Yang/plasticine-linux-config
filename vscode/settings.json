@@ -19,6 +19,10 @@
   "editor.fontLigatures": true,
   // 删除文件不再询问
   "explorer.confirmDelete": false,
+  // 移动文件不询问
+  "explorer.confirmDragAndDrop": false,
+  // 默认终端使用 WSL
+  "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
   // ====================== volar 配置 ======================
   // ref 自动添加 .value
   "volar.autoCompleteRefs": true,
@@ -246,6 +250,30 @@
         "g",
         "t"
       ]
+    },
+    // <leader>lso -- live server open
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "s",
+        "o"
+      ],
+      "commands": [
+        "extension.liveServer.goOnline"
+      ]
+    },
+    // <leader>lss -- live server stop
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "s",
+        "s"
+      ],
+      "commands": [
+        "extension.liveServer.goOffline"
+      ]
     }
   ],
   // INSERT 模式下的按键映射
@@ -356,5 +384,29 @@
     }
   ],
   // live-server 不显示已启动信息
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu-20.04 (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-20.04"
+      ]
+    }
+  }
 }
