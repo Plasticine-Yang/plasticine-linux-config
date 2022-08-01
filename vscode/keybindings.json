@@ -154,6 +154,24 @@
     "command": "explorer.newFolder",
     "when": "filesExplorerFocus && !inputFocus"
   },
+  // c 复制文件
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // x 剪切文件
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // p 粘贴文件
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
   // ==================== 终端 ====================
   // ctrl+\ toggle terminal
   {
@@ -220,13 +238,13 @@
   {
     "key": "oem_6 d",
     "command": "editor.action.marker.nextInFiles",
-    "when": "editorFocus && vim.mode != 'Insert'"
+    "when": "editorFocus && vim.mode == 'Normal'"
   },
   // 跳转到上一个错误
   {
     "key": "oem_4 d",
     "command": "editor.action.marker.prevInFiles",
-    "when": "editorFocus && vim.mode != 'Insert'"
+    "when": "editorFocus && vim.mode == 'Normal'"
   },
   // 禁用默认的快速修复快捷键
   {
