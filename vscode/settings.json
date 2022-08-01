@@ -21,6 +21,31 @@
   "explorer.confirmDelete": false,
   // 移动文件不询问
   "explorer.confirmDragAndDrop": false,
+  // 终端配置
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu-20.04 (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-20.04"
+      ]
+    }
+  },
   // 默认终端使用 WSL
   "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
   // ====================== volar 配置 ======================
@@ -47,6 +72,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // ====================== vim 配置 ======================
@@ -384,29 +412,5 @@
     }
   ],
   // live-server 不显示已启动信息
-  "liveServer.settings.donotShowInfoMsg": true,
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
-    },
-    "Ubuntu-20.04 (WSL)": {
-      "path": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": [
-        "-d",
-        "Ubuntu-20.04"
-      ]
-    }
-  }
+  "liveServer.settings.donotShowInfoMsg": true
 }
