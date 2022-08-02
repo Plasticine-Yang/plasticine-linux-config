@@ -1,6 +1,9 @@
 {
   // 主题
   "workbench.colorTheme": "monokai-charcoal",
+  // 图标主题
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.showWelcomeMessage": false,
   // ====================== vscode 编辑器相关配置 ======================
   // 字体
   "editor.fontFamily": "'CaskaydiaCove NF', Consolas, 'Courier New', monospace",
@@ -21,6 +24,8 @@
   "explorer.confirmDelete": false,
   // 移动文件不询问
   "explorer.confirmDragAndDrop": false,
+  // 行尾序列使用 lf
+  "files.eol": "\n",
   // 终端配置
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
@@ -46,8 +51,8 @@
       ]
     }
   },
-  // 默认终端使用 WSL
-  "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+  // 默认终端使用 PowerShell
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   // ====================== volar 配置 ======================
   // ref 自动添加 .value
   "volar.autoCompleteRefs": true,
@@ -125,6 +130,17 @@
       ],
       "commands": [
         "outline.focus"
+      ]
+    },
+    // <leader>rn 重命名变量
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename"
       ]
     },
     // 垂直方向移动时始终保持光标在中央
