@@ -64,6 +64,9 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -434,5 +437,14 @@
     }
   ],
   // live-server 不显示已启动信息
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+  // prettier 默认配置
+  "prettier.printWidth": 80,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.jsxSingleQuote": false,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.bracketSpacing": true,
+  "prettier.arrowParens": "avoid"
 }
