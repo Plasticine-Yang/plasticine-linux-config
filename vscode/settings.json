@@ -5,6 +5,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.showWelcomeMessage": false,
   // ====================== vscode 编辑器相关配置 ======================
+  // 缩进长度
+  "editor.tabSize": 2,
   // 字体
   "editor.fontFamily": "'CaskaydiaCove NF', Consolas, 'Courier New', monospace",
   // Auto Rename Tag 的官方替代品
@@ -221,6 +223,17 @@
       ],
       "commands": [
         "editor.action.formatDocument"
+      ]
+    },
+    // <leader>gi 格式化 import 顺序
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.organizeImports"
       ]
     },
     // <C-w><C-w> 关闭窗口
