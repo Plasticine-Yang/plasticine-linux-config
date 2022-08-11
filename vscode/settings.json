@@ -5,6 +5,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.showWelcomeMessage": false,
   // ====================== vscode 编辑器相关配置 ======================
+  // 滚动时将当前函数固定在顶部
+  "editor.experimental.stickyScroll.enabled": true,
   // 缩进长度
   "editor.tabSize": 2,
   // 字体
