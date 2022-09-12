@@ -96,8 +96,13 @@ alias lst='lsd --tree'
 
 # set proxy when login
 source proxy-utils system
-proxy-utils git
-proxy-utils npm
+source proxy-utils git
+source proxy-utils npm
+
+# ts-node --> tn
+# ts-node-esm --> tne
+alias tn='ts-node'
+alias tne='ts-node-esm'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -148,3 +153,7 @@ fpath=($fpath "/home/plasticine/.zfunctions")
 # Set typewritten ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt typewritten
+
+# Deno Runtime
+export DENO_INSTALL="/home/plasticine/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"

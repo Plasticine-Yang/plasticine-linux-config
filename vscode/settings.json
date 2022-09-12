@@ -1,18 +1,17 @@
 {
   // 主题
-  "workbench.colorTheme": "monokai-charcoal",
+  "workbench.colorTheme": "Dracula",
   // 图标主题
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.showWelcomeMessage": false,
-  // ====================== vscode 编辑器相关配置 ======================
-  // 滚动时将当前函数固定在顶部
-  "editor.experimental.stickyScroll.enabled": true,
   // 缩进长度
   "editor.tabSize": 2,
   // 字体
   "editor.fontFamily": "'CaskaydiaCove NF', Consolas, 'Courier New', monospace",
   // Auto Rename Tag 的官方替代品
   "editor.linkedEditing": true,
+  // 代码滚动吸附
+  "editor.stickyScroll.enabled": true,
   // Auto Close Tag 内置了 不需要手动开启
   // 彩虹括号 默认开启
   "editor.bracketPairColorization.enabled": true,
@@ -462,7 +461,20 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   "prettier.jsxSingleQuote": false,
-  "prettier.jsxBracketSameLine": false,
+  "prettier.bracketSameLine": false,
   "prettier.bracketSpacing": true,
-  "prettier.arrowParens": "avoid"
+  "prettier.arrowParens": "avoid",
+  // JavaScript 和 TypeScript 语言特性配置
+  // 自动更新 import
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // 类型标注
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true
 }
