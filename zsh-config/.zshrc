@@ -157,3 +157,6 @@ prompt typewritten
 # Deno Runtime
 export DENO_INSTALL="/home/plasticine/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# golang
+export PATH=$PATH:/usr/local/go/bin
