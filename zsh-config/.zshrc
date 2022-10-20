@@ -97,7 +97,7 @@ alias lst='lsd --tree'
 # set proxy when login
 source proxy-utils system
 source proxy-utils git
-source proxy-utils npm
+# source proxy-utils npm
 
 # ts-node --> tn
 # ts-node-esm --> tne
@@ -160,3 +160,4 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # golang
 export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/.go
