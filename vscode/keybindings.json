@@ -224,13 +224,13 @@
   },
   // 跳转到下一个错误
   {
-    "key": "oem_6 d",
+    "key": ". d",
     "command": "editor.action.marker.nextInFiles",
     "when": "editorFocus && vim.mode == 'Normal'"
   },
   // 跳转到上一个错误
   {
-    "key": "oem_4 d",
+    "key": ", d",
     "command": "editor.action.marker.prevInFiles",
     "when": "editorFocus && vim.mode == 'Normal'"
   },
@@ -267,5 +267,9 @@
     "key": "ctrl+pageup",
     "command": "-workbench.action.terminal.focusPrevious",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
   }
 ]
