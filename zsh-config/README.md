@@ -7,8 +7,16 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 直接使用官网的方式安装`oh-my-zsh`会遇到下面的问题
+
 ![image.png](https://cdn.nlark.com/yuque/0/2022/png/25507190/1655165161786-66ad8560-02f8-409a-896b-df8aeb93ec72.png#clientId=u4199c115-bb6e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=33&id=u2678f067&margin=%5Bobject%20Object%5D&name=image.png&originHeight=46&originWidth=1375&originalType=binary&ratio=1&rotation=0&showTitle=false&size=80476&status=done&style=none&taskId=ua2a8dc49-e815-4558-91bc-6a47af6ea59&title=&width=1000)
+
 这是因为`linux`没有翻墙导致的，要么挂代理翻墙，要么在能翻墙的主机上将`curl`的这个脚本下载下来，然后再传给`linux`执行这个脚本即可
+
+也可以使用`github`代理网站进行处理，加上`https://ghproxy.com`前缀即可
+
+```shell
+sh -c "$(curl -fsSL https://ghproxy.com/https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 ## 1.1 WSL2 挂代理
 
