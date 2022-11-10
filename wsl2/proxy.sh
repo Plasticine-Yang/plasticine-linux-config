@@ -3,7 +3,7 @@ hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 wslip=$(hostname -I | awk '{print $1}')
 port=7890
 PROXY_HTTP="http://${hostip}:${port}"
-PROXY_HTTPS="https://${hostip}:${port}"
+PROXY_HTTPS="http://${hostip}:${port}"
 PROXY_SOCKS="socks5h://${hostip}:${port}"
 
 function show() {
