@@ -48,17 +48,16 @@
     },
     "Ubuntu-20.04 (WSL)": {
       "path": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": [
-        "-d",
-        "Ubuntu-20.04"
-      ]
+      "args": ["-d", "Ubuntu-20.04"]
     }
   },
   // 默认终端使用 PowerShell
   "terminal.integrated.defaultProfile.windows": "PowerShell",
+
   // ====================== volar 配置 ======================
   // ref 自动添加 .value
   "volar.autoCompleteRefs": true,
+
   // ====================== 语言配置 ======================
   "javascript.suggest.completeJSDocs": true,
   "[html]": {
@@ -97,6 +96,7 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   // ====================== vim 配置 ======================
   // 修改 <leader> 为空格
   "vim.leader": "<Space>",
@@ -106,355 +106,186 @@
   "vim.hlsearch": false,
   // 快速跳转 双 <leader> 触发
   "vim.easymotion": true,
+
   // ------------------ 按键映射 ------------------
+
   // NORMAL 模式下的按键映射
   "vim.normalModeKeyBindingsNonRecursive": [
     // <S-h> 移动到行首
     {
-      "before": [
-        "<S-h>"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["<S-h>"],
+      "after": ["^"]
     },
     // <S-l> 移动到行尾
     {
-      "before": [
-        "<S-l>"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["<S-l>"],
+      "after": ["$"]
     },
     // <leader>e 打开文件管理器
     {
-      "before": [
-        "<leader>",
-        "e"
-      ],
-      "commands": [
-        "workbench.view.explorer"
-      ]
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
     },
     // <leader>o 打开大纲视图
     {
-      "before": [
-        "<leader>",
-        "o"
-      ],
-      "commands": [
-        "outline.focus"
-      ]
+      "before": ["<leader>", "o"],
+      "commands": ["outline.focus"]
     },
     // <leader>rn 重命名变量
     {
-      "before": [
-        "<leader>",
-        "r",
-        "n"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ]
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
     },
     // 垂直方向移动时始终保持光标在中央
     {
-      "before": [
-        "j"
-      ],
-      "after": [
-        "j",
-        "z",
-        "z"
-      ]
+      "before": ["j"],
+      "after": ["j", "z", "z"]
     },
     {
-      "before": [
-        "k"
-      ],
-      "after": [
-        "k",
-        "z",
-        "z"
-      ]
+      "before": ["k"],
+      "after": ["k", "z", "z"]
     },
     {
-      "before": [
-        "<C-d>"
-      ],
-      "after": [
-        "<C-d>",
-        "z",
-        "z"
-      ]
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
     },
     {
-      "before": [
-        "<C-u>"
-      ],
-      "after": [
-        "<C-u>",
-        "z",
-        "z"
-      ]
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
     },
     {
-      "before": [
-        "<C-f>"
-      ],
-      "after": [
-        "<C-f>",
-        "z",
-        "z"
-      ]
+      "before": ["<C-f>"],
+      "after": ["<C-f>", "z", "z"]
     },
     {
-      "before": [
-        "<C-b>"
-      ],
-      "after": [
-        "<C-b>",
-        "z",
-        "z"
-      ]
+      "before": ["<C-b>"],
+      "after": ["<C-b>", "z", "z"]
     },
     // <leader>f 格式化代码
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "editor.action.formatDocument"
-      ]
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
     },
     // <leader>gi 格式化 import 顺序
     {
-      "before": [
-        "<leader>",
-        "g",
-        "i"
-      ],
-      "commands": [
-        "editor.action.organizeImports"
-      ]
+      "before": ["<leader>", "g", "i"],
+      "commands": ["editor.action.organizeImports"]
     },
     // <C-w><C-w> 关闭窗口
     {
-      "before": [
-        "<C-w>",
-        "<C-w>"
-      ],
-      "after": [
-        "<C-w>",
-        "c"
-      ]
+      "before": ["<C-w>", "<C-w>"],
+      "after": ["<C-w>", "c"]
     },
     // <leader>p 显示面板
     {
-      "before": [
-        "<leader>",
-        "p"
-      ],
-      "commands": [
-        "workbench.action.togglePanel"
-      ]
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.togglePanel"]
     },
     // gh 鼠标悬浮
     {
-      "before": [
-        "g",
-        "h"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
+      "before": ["g", "h"],
+      "commands": ["editor.action.showHover"]
     },
     // gd 跳转变量定义
     {
-      "before": [
-        "g",
-        "d"
-      ],
-      "commands": [
-        "editor.action.revealDefinition"
-      ]
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
     },
     // gr 查看引用
     {
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [
-        "editor.action.referenceSearch.trigger"
-      ]
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
     },
     // gR 查看引用 -- 在底部面板显示
     {
-      "before": [
-        "g",
-        "R"
-      ],
-      "commands": [
-        "references-view.findReferences"
-      ]
+      "before": ["g", "R"],
+      "commands": ["references-view.findReferences"]
     },
     // <A-h> 切换到左标签页
     {
-      "before": [
-        "<A-h>"
-      ],
-      "after": [
-        "g",
-        "T"
-      ]
+      "before": ["<A-h>"],
+      "after": ["g", "T"]
     },
     // <A-l> 切换到右标签页
     {
-      "before": [
-        "<A-l>"
-      ],
-      "after": [
-        "g",
-        "t"
-      ]
+      "before": ["<A-l>"],
+      "after": ["g", "t"]
     },
     // <leader>lso -- live server open
     {
-      "before": [
-        "<leader>",
-        "l",
-        "s",
-        "o"
-      ],
-      "commands": [
-        "extension.liveServer.goOnline"
-      ]
+      "before": ["<leader>", "l", "s", "o"],
+      "commands": ["extension.liveServer.goOnline"]
     },
     // <leader>lss -- live server stop
     {
-      "before": [
-        "<leader>",
-        "l",
-        "s",
-        "s"
-      ],
-      "commands": [
-        "extension.liveServer.goOffline"
-      ]
+      "before": ["<leader>", "l", "s", "s"],
+      "commands": ["extension.liveServer.goOffline"]
     }
   ],
+
   // INSERT 模式下的按键映射
   "vim.insertModeKeyBindingsNonRecursive": [
     // jk -> <Esc>
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
     },
     // <C-h> 左移光标
     {
-      "before": [
-        "<C-h>"
-      ],
-      "after": [
-        "<Esc>",
-        "i"
-      ]
+      "before": ["<C-h>"],
+      "after": ["<Esc>", "i"]
     },
     // <C-j> 下移光标
     {
-      "before": [
-        "<C-j>"
-      ],
-      "after": [
-        "<Esc>",
-        "j",
-        "a"
-      ]
+      "before": ["<C-j>"],
+      "after": ["<Esc>", "j", "a"]
     },
     // <C-k> 上移光标
     {
-      "before": [
-        "<C-k>"
-      ],
-      "after": [
-        "<Esc>",
-        "k",
-        "a"
-      ]
+      "before": ["<C-k>"],
+      "after": ["<Esc>", "k", "a"]
     },
     // <C-l> 右移光标
     {
-      "before": [
-        "<C-l>"
-      ],
-      "after": [
-        "<Esc>",
-        "l",
-        "a"
-      ]
+      "before": ["<C-l>"],
+      "after": ["<Esc>", "l", "a"]
     }
   ],
+
   // VISUAL 模式下的按键映射
   "vim.visualModeKeyBindingsNonRecursive": [
     // 只格式化选中的代码
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "editor.action.formatSelection"
-      ]
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatSelection"]
     },
     // <S-h> 移动到行首
     {
-      "before": [
-        "<S-h>"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["<S-h>"],
+      "after": ["^"]
     },
     // <S-l> 移动到行尾
     {
-      "before": [
-        "<S-l>"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["<S-l>"],
+      "after": ["$"]
     }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
     // <S-h> 移动到行首
     {
-      "before": [
-        "<S-h>"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["<S-h>"],
+      "after": ["^"]
     },
     // <S-l> 移动到行尾
     {
-      "before": [
-        "<S-l>"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["<S-l>"],
+      "after": ["$"]
     }
   ],
+
   // live-server 不显示已启动信息
   "liveServer.settings.donotShowInfoMsg": true,
+
   // prettier 默认配置
   "prettier.printWidth": 80,
   "prettier.semi": false,
@@ -464,10 +295,13 @@
   "prettier.bracketSameLine": false,
   "prettier.bracketSpacing": true,
   "prettier.arrowParens": "avoid",
+
   // JavaScript 和 TypeScript 语言特性配置
+
   // 自动更新 import
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
+
   // 类型标注
   "javascript.inlayHints.parameterNames.enabled": "all",
   "javascript.inlayHints.parameterTypes.enabled": true,
@@ -475,6 +309,7 @@
   "typescript.inlayHints.parameterNames.enabled": "all",
   "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+
   // code runner 配置
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
@@ -529,5 +364,12 @@
     "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "sml": "cd $dir && sml $fileName"
-  }
+  },
+
+  // 关闭 js 和 ts 默认的路径补全
+  "javascript.suggest.paths": false,
+  "typescript.suggest.paths": false,
+
+  // npm intellisense
+  "npm-intellisense.packageSubfoldersIntellisense": true
 }
