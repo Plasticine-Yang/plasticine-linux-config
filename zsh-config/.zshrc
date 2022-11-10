@@ -1,9 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# 跳过软链接检查
-ZSH_DISABLE_COMPFIX="true"
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -87,22 +84,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# fastgit
-alias start-fastgit='git config --global url."https://hub.fastgit.xyz/".insteadOf "https://github.com/"'
-alias stop-fastgit='git config --unset --global url.https://hub.fastgit.xyz/.insteadof'
-
 # lsd --tree
 alias lst='lsd --tree'
 
 # set proxy when login
 source proxy-utils system
-source proxy-utils git
+# source proxy-utils git
 # source proxy-utils npm
-
-# ts-node --> tn
-# ts-node-esm --> tne
-alias tn='ts-node'
-alias tne='ts-node-esm'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -130,11 +118,14 @@ alias tne='ts-node-esm'
 
 # key binding
 KEYTIMEOUT=25
+
 # vi-mode
 bindkey -M viins 'jk' vi-cmd-mode
+
 # history-substring-search-up
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
 # autosuggestions
 bindkey '^ ' autosuggest-accept
 
@@ -153,11 +144,3 @@ fpath=($fpath "/home/plasticine/.zfunctions")
 # Set typewritten ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt typewritten
-
-# Deno Runtime
-export DENO_INSTALL="/home/plasticine/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
-# golang
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=~/.go
