@@ -27,6 +27,8 @@
   "explorer.confirmDelete": false,
   // 移动文件不询问
   "explorer.confirmDragAndDrop": false,
+  // 不折叠单一文件夹
+  "explorer.compactFolders": false,
   // 行尾序列使用 lf
   "files.eol": "\n",
   // 终端配置
@@ -287,14 +289,9 @@
   "liveServer.settings.donotShowInfoMsg": true,
 
   // prettier 默认配置
-  "prettier.printWidth": 80,
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
-  "prettier.jsxSingleQuote": false,
-  "prettier.bracketSameLine": false,
-  "prettier.bracketSpacing": true,
-  "prettier.arrowParens": "avoid",
 
   // JavaScript 和 TypeScript 语言特性配置
 
@@ -366,10 +363,24 @@
     "sml": "cd $dir && sml $fileName"
   },
 
+  "remote.SSH.remotePlatform": {
+    "Tencent": "linux"
+  },
+
   // 关闭 js 和 ts 默认的路径补全
   "javascript.suggest.paths": false,
   "typescript.suggest.paths": false,
 
   // npm intellisense
-  "npm-intellisense.packageSubfoldersIntellisense": true
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.scanDevDependencies": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // stylelint: turn off vscode built-in css related validation
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "less", "scss"]
 }
