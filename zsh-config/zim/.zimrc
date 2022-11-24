@@ -115,3 +115,6 @@ zmodule romkatv/powerlevel10k --use degit
 
 # vi-mode
 zmodule jeffreytse/zsh-vi-mode
+
+# zsh-z: jump quickly to directories that you have visited frequently in the past
+zmodule https://github.com/agkozak/zsh-z
