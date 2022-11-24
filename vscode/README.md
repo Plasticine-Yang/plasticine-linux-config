@@ -1,5 +1,9 @@
-# 插件依赖
+## Usage
 
-## 1. Vim
-## 2. multi-command
-## 3. Which Key
+安装插件:
+
+安装的插件来自于`extensions.txt`中，如：
+
+```shell
+code --install-extension Vue.volar
+```
