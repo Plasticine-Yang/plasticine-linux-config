@@ -29,7 +29,15 @@ packer.startup({
   function(use)
     use 'wbthomason/packer.nvim'
 
-    -- My plugins here
+    -- ================ colorschemes ================
+
+    -- tokyonight
+    use 'folke/tokyonight.nvim'
+
+    -- ==============================================
+
+    -- 平滑滚动
+    use('karb94/neoscroll.nvim')
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
@@ -50,6 +58,6 @@ packer.startup({
 pcall(vim.cmd, [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]])
