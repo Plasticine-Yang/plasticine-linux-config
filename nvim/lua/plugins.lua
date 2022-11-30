@@ -42,6 +42,24 @@ packer.startup({
     -- surround.nvim
     use 'ur4ltz/surround.nvim'
 
+    -- nvim-autopairs
+    use({
+      'windwp/nvim-autopairs',
+      config = function()
+        require('nvim-autopairs').setup({})
+      end,
+    })
+
+    -- hop.nvim 一个 easymotion + sneak 的聚合插件
+    use({
+      'phaazon/hop.nvim',
+      branch = 'v2', -- optional but strongly recommended
+      config = function()
+        -- you can configure Hop the way you like here; see :h hop-config
+        require('hop').setup({ keys = 'etovxqpdygfblzhckisuran' })
+      end,
+    })
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
