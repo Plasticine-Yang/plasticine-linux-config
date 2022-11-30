@@ -37,7 +37,10 @@ packer.startup({
     -- ==============================================
 
     -- 平滑滚动
-    use('karb94/neoscroll.nvim')
+    use 'karb94/neoscroll.nvim'
+
+    -- surround.nvim
+    use 'ur4ltz/surround.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

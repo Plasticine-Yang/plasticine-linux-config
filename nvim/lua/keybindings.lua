@@ -43,6 +43,14 @@ map('n', '<S-h>', '^', opt)
 -- <S-l> 移动到行尾
 map('n', '<S-l>', '$', opt)
 
+-- ================ file ================
+
+-- <C-s> save file
+map('n', '<C-s>', ':w<CR>', opt)
+
+-- qq -- Exit without modifying anything.
+map('n', 'qq', ':q!<CR>', opt)
+
 -- ================ INSERT MODE ================
 
 -- jk --> <Esc>

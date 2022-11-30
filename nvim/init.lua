@@ -15,4 +15,7 @@ require('colorschema')
 -- neoscroll
 require('plugins-config.neoscroll')
 
+-- surround.nvim
+require('plugins-config.surround')
+
 -- =============================================
