@@ -64,7 +64,6 @@ function unSetNPMProxy() {
 # 设置 curl 代理
 function setCURLProxy() {
   rm -f ~/.curlrc
-  touch ~/.curlrc
   echo "socks5=\"${PROXY_SOCKS}\"" > ~/.curlrc
 }
 
