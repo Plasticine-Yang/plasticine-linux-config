@@ -1,5 +1,11 @@
 # neovim
 
+## Usage
+
+```shell
+ln -s ~/.plasticine-linux-config/nvim ~/.config/nvim
+```
+
 ## 入口文件
 
 ```text
