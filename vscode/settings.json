@@ -1,9 +1,9 @@
 {
+  // =================== VSCode 编辑器配置 ===================
   // 主题
   "workbench.colorTheme": "Dracula",
   // 图标主题
   "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.showWelcomeMessage": false,
   // 缩进长度
   "editor.tabSize": 2,
   // 字体
@@ -31,37 +31,39 @@
   "explorer.compactFolders": false,
   // 行尾序列使用 lf
   "files.eol": "\n",
-  // 终端配置
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
-    },
-    "Ubuntu-20.04 (WSL)": {
-      "path": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": ["-d", "Ubuntu-20.04"]
-    }
-  },
-  // 默认终端使用 PowerShell
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // ========================================================
+
+  // ================== JavaScript 和 TypeScript 语言特性配置 ==================
+
+  "javascript.suggest.completeJSDocs": true,
+
+  // 自动更新 import
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // 类型标注
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+
+  // 关闭 js 和 ts 默认的路径补全
+  "javascript.suggest.paths": false,
+  "typescript.suggest.paths": false,
+
+  // ==========================================================================
 
   // ====================== volar 配置 ======================
+
   // ref 自动添加 .value
   "volar.autoCompleteRefs": true,
 
-  // ====================== 语言配置 ======================
-  "javascript.suggest.completeJSDocs": true,
+  // ========================================================
+
+  // ====================== 语言格式化配置 ======================
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -98,6 +100,11 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ==========================================================
 
   // ====================== vim 配置 ======================
   // 修改 <leader> 为空格
@@ -108,35 +115,19 @@
   "vim.hlsearch": false,
   // 快速跳转 双 <leader> 触发
   "vim.easymotion": true,
+  // 光标移动时跳过折叠代码块
+  "vim.foldfix": true,
 
-  // ------------------ 按键映射 ------------------
-
-  // NORMAL 模式下的按键映射
+  // normal mode
   "vim.normalModeKeyBindingsNonRecursive": [
-    // <S-h> 移动到行首
+    // scroll
     {
-      "before": ["<S-h>"],
-      "after": ["^"]
+      "before": ["J"],
+      "after": ["5", "j"]
     },
-    // <S-l> 移动到行尾
     {
-      "before": ["<S-l>"],
-      "after": ["$"]
-    },
-    // <leader>e 打开文件管理器
-    {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
-    },
-    // <leader>o 打开大纲视图
-    {
-      "before": ["<leader>", "o"],
-      "commands": ["outline.focus"]
-    },
-    // <leader>rn 重命名变量
-    {
-      "before": ["<leader>", "r", "n"],
-      "commands": ["editor.action.rename"]
+      "before": ["K"],
+      "after": ["5", "k"]
     },
     // 垂直方向移动时始终保持光标在中央
     {
@@ -162,6 +153,32 @@
     {
       "before": ["<C-b>"],
       "after": ["<C-b>", "z", "z"]
+    },
+    // move
+    // <S-h> 移动到行首
+    {
+      "before": ["<S-h>"],
+      "after": ["^"]
+    },
+    // <S-l> 移动到行尾
+    {
+      "before": ["<S-l>"],
+      "after": ["$"]
+    },
+    // <leader>e 打开文件管理器
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    // <leader>o 打开大纲视图
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["outline.focus"]
+    },
+    // <leader>rn 重命名变量
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
     },
     // <leader>f 格式化代码
     {
@@ -225,7 +242,7 @@
     }
   ],
 
-  // INSERT 模式下的按键映射
+  // insert mode
   "vim.insertModeKeyBindingsNonRecursive": [
     // jk -> <Esc>
     {
@@ -254,7 +271,7 @@
     }
   ],
 
-  // VISUAL 模式下的按键映射
+  // visual mode
   "vim.visualModeKeyBindingsNonRecursive": [
     // 只格式化选中的代码
     {
@@ -269,9 +286,11 @@
     // <S-l> 移动到行尾
     {
       "before": ["<S-l>"],
-      "after": ["$"]
+      "after": ["$", "h"]
     }
   ],
+
+  // operator pending mode
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
     // <S-h> 移动到行首
     {
@@ -281,102 +300,27 @@
     // <S-l> 移动到行尾
     {
       "before": ["<S-l>"],
-      "after": ["$"]
+      "after": ["$", "h"]
     }
   ],
 
-  // live-server 不显示已启动信息
-  "liveServer.settings.donotShowInfoMsg": true,
+  // ======================================================
 
   // prettier 默认配置
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
 
-  // JavaScript 和 TypeScript 语言特性配置
-
-  // 自动更新 import
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-
-  // 类型标注
-  "javascript.inlayHints.parameterNames.enabled": "all",
-  "javascript.inlayHints.parameterTypes.enabled": true,
-  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
-  "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.inlayHints.parameterTypes.enabled": true,
-  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-
   // code runner 配置
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
     "javascript": "node",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "php": "php",
-    "python": "python -u",
-    "perl": "perl",
-    "perl6": "perl6",
-    "ruby": "ruby",
-    "go": "go run",
-    "lua": "lua",
-    "groovy": "groovy",
-    "powershell": "powershell -ExecutionPolicy ByPass -File",
-    "bat": "cmd /c",
-    "shellscript": "bash",
-    "fsharp": "fsi",
-    "csharp": "scriptcs",
-    "vbscript": "cscript //Nologo",
-    "typescript": "esno",
-    "coffeescript": "coffee",
-    "scala": "scala",
-    "swift": "swift",
-    "julia": "julia",
-    "crystal": "crystal",
-    "ocaml": "ocaml",
-    "r": "Rscript",
-    "applescript": "osascript",
-    "clojure": "lein exec",
-    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-    "racket": "racket",
-    "scheme": "csi -script",
-    "ahk": "autohotkey",
-    "autoit": "autoit3",
-    "dart": "dart",
-    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-    "haskell": "runhaskell",
-    "nim": "nim compile --verbosity:0 --hints:off --run",
-    "lisp": "sbcl --script",
-    "kit": "kitc --run",
-    "v": "v run",
-    "sass": "sass --style expanded",
-    "scss": "scss --style expanded",
-    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
-    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "sml": "cd $dir && sml $fileName"
+    "typescript": "esno"
   },
-
-  "remote.SSH.remotePlatform": {
-    "Tencent": "linux"
-  },
-
-  // 关闭 js 和 ts 默认的路径补全
-  "javascript.suggest.paths": false,
-  "typescript.suggest.paths": false,
 
   // npm intellisense
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.scanDevDependencies": true,
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
 
   // stylelint: turn off vscode built-in css related validation
   "css.validate": false,

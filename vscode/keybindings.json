@@ -45,10 +45,7 @@
     "command": "vim.remap",
     "when": "vim.mode == 'Normal' && !suggestWidgetDetailsVisible && !inQuickOpen && !panelFocus",
     "args": {
-      "after": [
-        "<C-w>",
-        "h"
-      ]
+      "after": ["<C-w>", "h"]
     }
   },
   {
@@ -56,10 +53,7 @@
     "command": "vim.remap",
     "when": "vim.mode == 'Normal' && !suggestWidgetDetailsVisible && !inQuickOpen && !panelFocus",
     "args": {
-      "after": [
-        "<C-w>",
-        "j"
-      ]
+      "after": ["<C-w>", "j"]
     }
   },
   {
@@ -67,10 +61,7 @@
     "command": "vim.remap",
     "when": "vim.mode == 'Normal' && !suggestWidgetDetailsVisible && !inQuickOpen && !panelFocus",
     "args": {
-      "after": [
-        "<C-w>",
-        "k"
-      ]
+      "after": ["<C-w>", "k"]
     }
   },
   {
@@ -78,10 +69,7 @@
     "command": "vim.remap",
     "when": "vim.mode == 'Normal' && !suggestWidgetDetailsVisible && !inQuickOpen && !panelFocus",
     "args": {
-      "after": [
-        "<C-w>",
-        "l"
-      ]
+      "after": ["<C-w>", "l"]
     }
   },
   // <A-h> 切换到左标签页
@@ -90,10 +78,7 @@
     "command": "vim.remap",
     "when": "vim.mode == 'Normal'",
     "args": {
-      "after": [
-        "g",
-        "T"
-      ]
+      "after": ["g", "T"]
     }
   },
   // <A-l> 切换到右标签页
@@ -102,10 +87,7 @@
     "command": "vim.remap",
     "when": "vim.mode == 'Normal'",
     "args": {
-      "after": [
-        "g",
-        "t"
-      ]
+      "after": ["g", "t"]
     }
   },
   // alt+. 触发建议
