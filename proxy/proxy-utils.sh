@@ -51,12 +51,14 @@ function unsetGITProxy() {
 
 # 设置 npm 代理
 function setNPMProxy() {
+  npm config set proxy ${PROXY_SOCKS}
   npm config set http-proxy ${PROXY_HTTP}
-  npm config set https-proxy ${PROXY_HTTPS}
+  npm config set https-proxy ${PROXY_HTTP}
 }
 
 # 取消 npm 代理
-function unSetNPMProxy() {
+function unsetNPMProxy() {
+  npm config delete proxy
   npm config delete http-proxy
   npm config delete https-proxy
 }
@@ -84,8 +86,8 @@ elif [ "$1" = "unsetGITProxy" ]; then
   unsetGITProxy
 elif [ "$1" = "setNPMProxy" ]; then
   setNPMProxy
-elif [ "$1" = "unSetNPMProxy" ]; then
-  unSetNPMProxy 
+elif [ "$1" = "unsetNPMProxy" ]; then
+  unsetNPMProxy 
 elif [ "$1" = "setCURLProxy" ]; then
   setCURLProxy 
 elif [ "$1" = "unsetCURLProxy" ]; then
