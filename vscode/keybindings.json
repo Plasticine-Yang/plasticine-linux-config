@@ -154,6 +154,18 @@
     "command": "filesExplorer.paste",
     "when": "filesExplorerFocus && !inputFocus"
   },
+  // 复制文件绝对路径
+  {
+    "key": "y a", // yank absolute path
+    "command": "copyFilePath",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // 复制文件相对路径
+  {
+    "key": "y r", // yank relative path
+    "command": "copyRelativeFilePath",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
   // ==================== 终端 ====================
   // ctrl+\ toggle terminal
   {
