@@ -1,18 +1,23 @@
 #!/bin/bash
 
 # 获取网关 IP
-ip='localhost'
+gatewayIP=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+
+# 获取主机 IP
+hostIP=$(hostname -I | awk '{print $1}')
 
 # 代理服务器端口
 port=7890
 
 # 代理 url
-PROXY_HTTP="http://${ip}:${port}"
-PROXY_HTTPS="https://${ip}:${port}"
-PROXY_SOCKS="socks5h://${ip}:${port}"
+PROXY_HTTP="http://${gatewayIP}:${port}"
+PROXY_HTTPS="https://${gatewayIP}:${port}"
+PROXY_SOCKS="socks5h://${gatewayIP}:${port}"
 
 # 显示代理信息
 function info() {
+  echo "gatewayIP: ${gatewayIP}"
+  echo "hostIP: ${hostIP}"
   echo "ALL_PROXY: ${ALL_PROXY}"
   echo "HTTP_PROXY: ${HTTP_PROXY}"
   echo "HTTPS_PROXY: ${HTTPS_PROXY}"
