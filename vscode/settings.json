@@ -8,6 +8,8 @@
   "editor.tabSize": 2,
   // 字体
   "editor.fontFamily": "'CaskaydiaCove NF', Consolas, 'Courier New', monospace",
+  // 相对行号
+  "editor.lineNumbers": "relative",
   // Auto Rename Tag 的官方替代品
   "editor.linkedEditing": true,
   // 代码滚动吸附
