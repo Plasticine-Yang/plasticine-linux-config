@@ -8,7 +8,7 @@ port=7890
 
 # 代理 url
 PROXY_HTTP="http://${ip}:${port}"
-PROXY_HTTPS="https://${ip}:${port}"
+PROXY_HTTPS="http://${ip}:${port}"
 PROXY_SOCKS="socks5h://${ip}:${port}"
 
 # 显示代理信息

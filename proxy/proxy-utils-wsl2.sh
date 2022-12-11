@@ -11,7 +11,7 @@ port=7890
 
 # 代理 url
 PROXY_HTTP="http://${gatewayIP}:${port}"
-PROXY_HTTPS="https://${gatewayIP}:${port}"
+PROXY_HTTPS="http://${gatewayIP}:${port}"
 PROXY_SOCKS="socks5h://${gatewayIP}:${port}"
 
 # 显示代理信息
