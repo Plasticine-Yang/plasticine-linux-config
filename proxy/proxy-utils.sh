@@ -69,6 +69,14 @@ function unsetCURLProxy() {
   rm -f ~/.curlrc
 }
 
+function setAPTProxy() {
+  sudo rm -rf /etc/apt/apt.conf.d/proxy.conf
+  sudo cat > /etc/apt/apt.conf.d/proxy.conf <<- EOF
+Acquire::http::Proxy "${PROXY_HTTP}";
+Acquire::https::Proxy "${PROXY_HTTP}";
+EOF
+}
+
 if [ "$1" = "info" ]; then
   info
 elif [ "$1" = "setSystemProxy" ]; then
@@ -87,6 +95,10 @@ elif [ "$1" = "setCURLProxy" ]; then
   setCURLProxy 
 elif [ "$1" = "unsetCURLProxy" ]; then
   unsetCURLProxy 
+elif [ "$1" = "setAPTProxy" ]; then
+  setAPTProxy 
+elif [ "$1" = "unsetAPTProxy" ]; then
+  unsetAPTProxy 
 else
   echo "[ERROR]: invalid arguments!"
 fi 
