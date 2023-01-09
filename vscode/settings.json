@@ -192,6 +192,11 @@
       "before": ["<leader>", "g", "i"],
       "commands": ["editor.action.organizeImports"]
     },
+    // <leader>mcb 生成 markdown code block
+    {
+      "before": ["<leader>", "m", "c", "b"],
+      "commands": ["markdown.extension.editing.toggleCodeBlock"]
+    },
     // <C-w><C-w> 关闭窗口
     {
       "before": ["<C-w>", "<C-w>"],
