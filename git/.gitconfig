@@ -1,0 +1,7 @@
+[user]
+	email = 975036719@qq.com
+	name = plasticine
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
