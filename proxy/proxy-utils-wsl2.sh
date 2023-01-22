@@ -74,12 +74,18 @@ function unsetCURLProxy() {
   rm -f ~/.curlrc
 }
 
+# 设置 apt 代理
 function setAPTProxy() {
   sudo rm -rf /etc/apt/apt.conf.d/proxy.conf
   sudo cat > /etc/apt/apt.conf.d/proxy.conf <<- EOF
 Acquire::http::Proxy "${PROXY_HTTP}";
 Acquire::https::Proxy "${PROXY_HTTP}";
 EOF
+}
+
+# 取消 apt 代理
+function unsetAPTProxy() {
+  sudo rm -rf /etc/apt/apt.conf.d/proxy.conf
 }
 
 function unsetAPTProxy() {
