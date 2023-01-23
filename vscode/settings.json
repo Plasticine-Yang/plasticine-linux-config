@@ -1,7 +1,7 @@
 {
   // =================== VSCode 编辑器配置 ===================
   // 主题
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "One Dark Pro Darker",
   // 图标主题
   "workbench.iconTheme": "material-icon-theme",
   // 缩进长度
@@ -33,6 +33,17 @@
   "explorer.compactFolders": false,
   // 行尾序列使用 lf
   "files.eol": "\n",
+
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
 
   // ========================================================
 
@@ -104,6 +115,9 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
 
   // ==========================================================
@@ -332,6 +346,5 @@
   // stylelint: turn off vscode built-in css related validation
   "css.validate": false,
   "less.validate": false,
-  "scss.validate": false,
-  "stylelint.validate": ["css", "less", "scss"]
+  "scss.validate": false
 }
