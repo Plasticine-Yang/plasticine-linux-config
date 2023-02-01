@@ -326,6 +326,7 @@
   // ======================================================
 
   // prettier 默认配置
+  "prettier.printWidth": 120,
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
