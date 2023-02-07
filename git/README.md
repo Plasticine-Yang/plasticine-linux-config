@@ -5,22 +5,16 @@
 ### 全局配置
 
 ```shell
-# global user email
-git config --global user.email "975036719@qq.com"
-# global username
-git config --global user.name "plasticine9750"
-# 保存密码
+git config --global user.email "975036719@qq.com" && \
+git config --global user.name "plasticine9750" && \
 git config --global credential.helper store
 ```
 
 ### 局部配置
 
 ```shell
-# global user email
-git config user.email "975036719@qq.com"
-# global username
-git config user.name "plasticine9750"
-# 保存密码
+git config user.email "975036719@qq.com" && \
+git config user.name "plasticine9750" && \
 git config credential.helper store
 ```
 
