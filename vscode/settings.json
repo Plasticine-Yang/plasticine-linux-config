@@ -7,7 +7,10 @@
   // 缩进长度
   "editor.tabSize": 2,
   // 字体
-  "editor.fontFamily": "'CaskaydiaCove NF', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', Consolas, 'Courier New', monospace",
+  // 字体大小
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
   // 相对行号
   "editor.lineNumbers": "relative",
   // Auto Rename Tag 的官方替代品
@@ -348,5 +351,6 @@
   "scss.validate": false,
 
   // dotenv
-  "dotenv.enableAutocloaking": false
+  "dotenv.enableAutocloaking": false,
+  "terminal.integrated.defaultProfile.osx": "zsh"
 }
