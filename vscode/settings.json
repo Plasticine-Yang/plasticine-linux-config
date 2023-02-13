@@ -3,7 +3,7 @@
   // 主题
   "workbench.colorTheme": "One Dark Pro Darker",
   // 图标主题
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   // 缩进长度
   "editor.tabSize": 2,
   // 字体
@@ -25,7 +25,7 @@
   // 平滑滚动
   "editor.smoothScrolling": true,
   // 光标平滑移动
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   // 开启连字符显示
   "editor.fontLigatures": true,
   // 显示分界线 - 用于提醒自己代码过长需要换行
@@ -113,12 +113,6 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "[nginx]": {
-    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
   },
 
   // ==========================================================
@@ -351,6 +345,33 @@
   "scss.validate": false,
 
   // dotenv
-  "dotenv.enableAutocloaking": false,
-  "terminal.integrated.defaultProfile.osx": "zsh"
+  "terminal.integrated.defaultProfile.osx": "zsh",
+
+  // Tailwind CSS Intellisense
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+
+  // 单词拼写检查白名单
+  "cSpell.userWords": [
+    "ahmadalli",
+    "azuretools",
+    "Caskaydia",
+    "Consolas",
+    "dockercompose",
+    "easymotion",
+    "edenx",
+    "esbenp",
+    "foldfix",
+    "hlsearch",
+    "stylelint",
+    "tailwindcss",
+    "typeof"
+  ]
 }
