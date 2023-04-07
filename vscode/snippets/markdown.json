@@ -1,0 +1,7 @@
+{
+  "code-group": {
+    "prefix": "cg",
+    "body": [":::code-group", "", "```$1", "$0", "```", "", ":::"],
+    "description": "Markdown code group"
+  }
+}
