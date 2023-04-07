@@ -1,7 +1,9 @@
 [user]
-	email = 975036719@qq.com
+  email = 975036719@qq.com
 	name = plasticine
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [credential]
-	helper = store
+  helper = store
+[pull]
+  rebase = true
