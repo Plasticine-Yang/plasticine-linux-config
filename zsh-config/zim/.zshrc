@@ -143,8 +143,6 @@ unset key
 
 # ============================ User configuration ============================
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 # vi-mode
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk # jk -> <Esc>
 ZVM_VI_EDITOR=nvim # vv -> nvim
@@ -153,5 +151,3 @@ ZVM_VI_EDITOR=nvim # vv -> nvim
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-source ~/.profile
