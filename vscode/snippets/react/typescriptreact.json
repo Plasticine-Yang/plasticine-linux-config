@@ -1,0 +1,15 @@
+{
+  "Export default FC": {
+    "prefix": "edfc",
+    "body": [
+      "import type { FC } from \"react\"",
+      "",
+      "interface $1Props {}",
+      "",
+      "const $1: FC = (props) => {$2}",
+      "",
+      "export default $1"
+    ],
+    "description": "Define a React functional component with default export"
+  }
+}
