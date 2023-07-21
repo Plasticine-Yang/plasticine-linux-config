@@ -349,7 +349,8 @@
 
   // Tailwind CSS Intellisense
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss",
+    "*.json": "jsonc"
   },
   "editor.quickSuggestions": {
     "strings": true
