@@ -10,11 +10,11 @@
   "editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', Consolas, 'Courier New', monospace",
   // 字体大小
   "editor.fontSize": 16,
+  // 终端配置
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.defaultProfile.osx": "zsh",
   // 相对行号
   "editor.lineNumbers": "relative",
-  // Auto Rename Tag 的官方替代品
-  "editor.linkedEditing": true,
   // 代码滚动吸附
   "editor.stickyScroll.enabled": true,
   // Auto Close Tag 内置了 不需要手动开启
@@ -38,6 +38,9 @@
   "explorer.compactFolders": false,
   // 行尾序列使用 lf
   "files.eol": "\n",
+  // 开启顶部搜索栏
+  "window.titleBarStyle": "custom",
+  "window.commandCenter": true,
 
   "editor.tokenColorCustomizations": {
     "textMateRules": []
@@ -328,13 +331,6 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
 
-  // code runner 配置
-  "code-runner.runInTerminal": true,
-  "code-runner.executorMap": {
-    "javascript": "node",
-    "typescript": "tsx"
-  },
-
   // npm intellisense
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.scanDevDependencies": true,
@@ -344,9 +340,6 @@
   "less.validate": false,
   "scss.validate": false,
 
-  // dotenv
-  "terminal.integrated.defaultProfile.osx": "zsh",
-
   // Tailwind CSS Intellisense
   "files.associations": {
     "*.css": "tailwindcss",
@@ -355,24 +348,27 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "html"
-  },
 
-  // 单词拼写检查白名单
+  "errorLens.excludeBySource": ["ts(2559)"],
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
   "cSpell.userWords": [
-    "ahmadalli",
-    "azuretools",
-    "Caskaydia",
-    "Consolas",
-    "dockercompose",
-    "easymotion",
-    "edenx",
-    "esbenp",
-    "foldfix",
-    "hlsearch",
-    "stylelint",
-    "tailwindcss",
-    "typeof"
-  ]
+    "ahooks",
+    "apiname",
+    "astro",
+    "astrojs",
+    "autoinstaller",
+    "autoinstallers",
+    "clsx",
+    "commitlint",
+    "iconify",
+    "immer",
+    "impls",
+    "tauri",
+    "tsup",
+    "zustand"
+  ],
+  "workbench.sideBar.location": "right"
 }
