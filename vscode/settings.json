@@ -229,6 +229,11 @@
       "before": ["g", "d"],
       "commands": ["editor.action.revealDefinition"]
     },
+    // gi 跳转接口实现
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
     // gr 查看引用
     {
       "before": ["g", "r"],
@@ -370,5 +375,6 @@
     "tsup",
     "zustand"
   ],
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "editor.accessibilitySupport": "off"
 }
