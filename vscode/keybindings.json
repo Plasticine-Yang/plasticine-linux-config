@@ -39,6 +39,12 @@
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "!terminalFocus && !editorTextFocus"
   },
+  // 在任意地方都可以通过 <C-c> 回到编辑区（除了终端模式下之外）
+  {
+    "key": "ctrl+alt+e",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorTextFocus"
+  },
   // <C-h/j/k/l> 窗口跳转
   {
     "key": "ctrl+h",
