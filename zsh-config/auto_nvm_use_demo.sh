@@ -14,7 +14,6 @@ current_directory=$(pwd)
 if [[ -v target_directories["$current_directory"] ]]; then
   # 获取关联的 Node.js 版本
   node_version="${target_directories[$current_directory]}"
-  echo $node_version
 
   # 执行 nvm use 对应的版本
   nvm use "$node_version"
