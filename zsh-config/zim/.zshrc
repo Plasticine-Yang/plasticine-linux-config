@@ -152,8 +152,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# 启动路径中有 .nvmrc 时自动切换 node 版本
-if [[ -f .nvmrc ]]; then
-  nvm use
+# 检查当前 shell 启动目录并执行 nvm use 脚本
+auto_nvm_use_script_path="$HOME/.plasticine-linux-config/zsh-config/auto_nvm_use.sh"
+if [ -f "$auto_nvm_use_script_path" ]; then
+  source "$auto_nvm_use_script_path"
 fi
-
