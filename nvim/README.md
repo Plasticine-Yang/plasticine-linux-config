@@ -2,6 +2,18 @@
 
 ## Usage
 
+安装 neovim
+
+```shell
+curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+tar -zxvf nvim-linux64.tar.gz
+sudo mv ./nvim-linux64 ~/.nvim
+sudo ln -s ~/.nvim/bin/nvim /usr/local/bin
+rm -rf ./nvim-linux64.tar.gz
+```
+
+使用配置
+
 ```shell
 ln -s ~/.plasticine-linux-config/nvim ~/.config/nvim
 ```
