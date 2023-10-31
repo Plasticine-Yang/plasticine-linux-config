@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 获取网关 IP
-ip='localhost'
+ip='127.0.0.1'
 
 # 代理服务器端口
 port=7890
@@ -9,7 +9,6 @@ port=7890
 # 代理 url
 PROXY_HTTP="http://${ip}:${port}"
 PROXY_HTTPS="http://${ip}:${port}"
-PROXY_SOCKS="socks5h://${ip}:${port}"
 
 # 显示代理信息
 function info() {
@@ -20,7 +19,7 @@ function info() {
 
 # 设置系统代理
 function setSystemProxy() {
-  export ALL_PROXY="${PROXY_SOCKS}"
+  export ALL_PROXY="${PROXY_HTTPS}"
   export HTTP_PROXY="${PROXY_HTTP}"
   export HTTPS_PROXY="${PROXY_HTTPS}"
 }
@@ -46,8 +45,8 @@ function unsetGITProxy() {
 
 # 设置 npm 代理
 function setNPMProxy() {
-  npm config set proxy ${PROXY_SOCKS}
-  npm config set https-proxy ${PROXY_HTTP}
+  npm config set proxy ${PROXY_HTTP}
+  npm config set https-proxy ${PROXY_HTTPS}
 }
 
 # 取消 npm 代理
@@ -81,28 +80,41 @@ function unsetAPTProxy() {
   sudo rm -rf /etc/apt/apt.conf.d/proxy.conf
 }
 
-if [ "$1" = "info" ]; then
-  info
-elif [ "$1" = "setSystemProxy" ]; then
-  setSystemProxy
-elif [ "$1" = "unsetSystemProxy" ]; then
-  unsetSystemProxy
-elif [ "$1" = "setGITProxy" ]; then
-  setGITProxy
-elif [ "$1" = "unsetGITProxy" ]; then
-  unsetGITProxy
-elif [ "$1" = "setNPMProxy" ]; then
-  setNPMProxy
-elif [ "$1" = "unsetNPMProxy" ]; then
-  unsetNPMProxy 
-elif [ "$1" = "setCURLProxy" ]; then
-  setCURLProxy 
-elif [ "$1" = "unsetCURLProxy" ]; then
-  unsetCURLProxy 
-elif [ "$1" = "setAPTProxy" ]; then
-  setAPTProxy 
-elif [ "$1" = "unsetAPTProxy" ]; then
-  unsetAPTProxy 
-else
-  echo "[ERROR]: invalid arguments!"
-fi 
+case "$1" in
+  "info")
+    info
+    ;;
+  "setSystemProxy")
+    setSystemProxy
+    ;;
+  "unsetSystemProxy")
+    unsetSystemProxy
+    ;;
+  "setGITProxy")
+    setGITProxy
+    ;;
+  "unsetGITProxy")
+    unsetGITProxy
+    ;;
+  "setNPMProxy")
+    setNPMProxy
+    ;;
+  "unsetNPMProxy")
+    unsetNPMProxy
+    ;;
+  "setCURLProxy")
+    setCURLProxy
+    ;;
+  "unsetCURLProxy")
+    unsetCURLProxy
+    ;;
+  "setAPTProxy")
+    setAPTProxy
+    ;;
+  "unsetAPTProxy")
+    unsetAPTProxy
+    ;;
+  *)
+    echo "[ERROR]: Invalid arguments!"
+    ;;
+esac
