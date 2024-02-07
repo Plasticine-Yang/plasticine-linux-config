@@ -4,6 +4,8 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   // 图标主题
   "workbench.iconTheme": "vscode-icons",
+  // 自动保存
+  "files.autoSave": "off",
   // 缩进长度
   "editor.tabSize": 2,
   // 字体
@@ -366,13 +368,24 @@
     "astrojs",
     "autoinstaller",
     "autoinstallers",
+    "Caskaydia",
     "clsx",
     "commitlint",
+    "Consolas",
+    "dockercompose",
+    "dont",
+    "easymotion",
+    "esbenp",
+    "foldfix",
+    "hlsearch",
     "iconify",
     "immer",
     "impls",
+    "stylelint",
+    "tailwindcss",
     "tauri",
     "tsup",
+    "vsicons",
     "zustand"
   ],
   "workbench.sideBar.location": "right",
