@@ -18,7 +18,6 @@ code --install-extension ms-vscode.remote-explorer
 code --install-extension pbkit.vscode-pbkit
 code --install-extension rust-lang.rust-analyzer
 code --install-extension sdras.vue-vscode-snippets
-code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension TakumiI.markdowntable
 code --install-extension tamasfe.even-better-toml
 code --install-extension tauri-apps.tauri-vscode

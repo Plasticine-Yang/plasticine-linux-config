@@ -157,3 +157,5 @@ auto_nvm_use_script_path="$HOME/.plasticine-linux-config/zsh-config/auto_nvm_use
 if [ -f "$auto_nvm_use_script_path" ]; then
   source "$auto_nvm_use_script_path"
 fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

@@ -16,5 +16,5 @@ rm -f lazygit.tar.gz
 
 ```shell
 brew install lazygit
-ln -s /usr/local/bin/lazygit /usr/local/bin/lg
+ln -s /opt/homebrew/bin/lazygit /usr/local/bin/lg
 ```
