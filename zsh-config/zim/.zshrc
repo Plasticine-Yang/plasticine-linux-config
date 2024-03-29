@@ -158,4 +158,7 @@ if [ -f "$auto_nvm_use_script_path" ]; then
   source "$auto_nvm_use_script_path"
 fi
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+bootstrap_script_path="$HOME/.bootstrap.sh"
+if [ -f "$bootstrap_script_path" ]; then
+  source "$bootstrap_script_path"
+fi
