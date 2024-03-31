@@ -349,7 +349,6 @@
 
   // Tailwind CSS Intellisense
   "files.associations": {
-    "*.css": "tailwindcss",
     "*.json": "jsonc"
   },
   "editor.quickSuggestions": {
@@ -361,33 +360,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vsicons.dontShowNewVersionMessage": true,
-  "cSpell.userWords": [
-    "ahooks",
-    "apiname",
-    "astro",
-    "astrojs",
-    "autoinstaller",
-    "autoinstallers",
-    "Caskaydia",
-    "clsx",
-    "commitlint",
-    "Consolas",
-    "dockercompose",
-    "dont",
-    "easymotion",
-    "esbenp",
-    "foldfix",
-    "hlsearch",
-    "iconify",
-    "immer",
-    "impls",
-    "stylelint",
-    "tailwindcss",
-    "tauri",
-    "tsup",
-    "vsicons",
-    "zustand"
-  ],
   "workbench.sideBar.location": "right",
   "editor.accessibilitySupport": "off"
 }
