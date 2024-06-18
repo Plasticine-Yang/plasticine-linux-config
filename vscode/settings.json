@@ -1,7 +1,7 @@
 {
   // =================== VSCode 编辑器配置 ===================
   // 主题
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "Tokyo Night Storm",
   // 图标主题
   "workbench.iconTheme": "vscode-icons",
   // 自动保存
@@ -9,7 +9,7 @@
   // 缩进长度
   "editor.tabSize": 2,
   // 字体
-  "editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
   // 字体大小
   "editor.fontSize": 16,
   // 终端配置
@@ -361,5 +361,6 @@
   },
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.sideBar.location": "right",
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+  "svg.preview.mode": "img"
 }
